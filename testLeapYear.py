@@ -30,7 +30,7 @@ class TestCalculator(unittest.TestCase):
         # with unittest.mock.patch('volumeOfCube.retrieve_input', return_value=-1):
         capturedOutput = io.StringIO()                  # Create StringIO object
         sys.stdout = capturedOutput                     #  and redirect stdout.
-        leapYear.calcLeapYear()                                    # Call function.
+        leapYear.calcLeapYear(2020)                                    # Call function.
         sys.stdout = sys.__stdout__                     # Reset redirect.
         expected = ['2020 is a leap year', '']
         actual = capturedOutput.getvalue().split('\n')
@@ -41,7 +41,7 @@ class TestCalculator(unittest.TestCase):
         # with unittest.mock.patch('volumeOfCube.retrieve_input', return_value=-1):
         capturedOutput = io.StringIO()                  # Create StringIO object
         sys.stdout = capturedOutput                     #  and redirect stdout.
-        leapYear.calcLeapYear()                                  # Call function.
+        leapYear.calcLeapYear(2019)                                  # Call function.
         sys.stdout = sys.__stdout__                     # Reset redirect.
         expected = ['2019 is not a leap year', '']
         actual = capturedOutput.getvalue().split('\n')

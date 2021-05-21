@@ -1,6 +1,6 @@
 
-def calcLeapYear():
-    userInputYear = int(input("Enter a year: "))
+def calcLeapYear(userInputYear):
+    # userInputYear = int(input("Enter a year: "))
 
     if (userInputYear % 4) == 0:
         if (userInputYear % 100) == 0:
@@ -16,7 +16,7 @@ def calcLeapYear():
 
 
 def main():
-    calcLeapYear()
+    calcLeapYear(2020)
 
 
 if __name__ == "__main__":
